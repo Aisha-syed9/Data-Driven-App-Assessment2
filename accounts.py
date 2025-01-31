@@ -8,16 +8,16 @@ class AccountPage(tk.Frame):
         self.master = master
         self.configure(bg='black')
 
-        # Set background image for the account page
-        account_background_image = tk.PhotoImage(file="images/Account page.png")  # Replace with your background image path
+        # background image for the account page
+        account_background_image = tk.PhotoImage(file="images/Account page.png")  #background image path
         account_background_label = tk.Label(self, image=account_background_image)
-        account_background_label.place(relwidth=1, relheight=1)  # Cover the entire window
+        account_background_label.place(relwidth=1, relheight=1)  # Covers the entire window
 
         # Keep reference to the background image to prevent garbage collection
         self.image_ref = account_background_image
 
         # Example profile button
-        profile_image = Image.open("images/profile.png")  # Replace with your profile image path
+        profile_image = Image.open("images/profile.png")  #profile image path
         
         # Convert transparent pixels to black
         profile_image = profile_image.convert("RGBA")  # Convert to RGBA to manage transparency
@@ -39,7 +39,7 @@ class AccountPage(tk.Frame):
 
         # Create the profile button
         profile_button = tk.Button(self, image=profile_image, command=self.select_profile, relief="flat", borderwidth=0, highlightthickness=0)
-        profile_button.place(relx=0.4, rely=0.5, anchor="center")  # Adjust the position as needed
+        profile_button.place(relx=0.4, rely=0.5, anchor="center")  
 
         # Keep reference to the profile image to prevent garbage collection
         self.profile_image_ref = profile_image
@@ -48,7 +48,7 @@ class AccountPage(tk.Frame):
         print("Profile Selected!")
         # Open the MovieApp window
         self.master.withdraw()  # Hide the current window
-        movie_window = tk.Toplevel(self.master)  # Create a new window
+        movie_window = tk.Toplevel(self.master)  # Creates a new window
         movie_app = MovieApp(movie_window)  # Initialize MovieApp in the new window
 
 # Main application setup
