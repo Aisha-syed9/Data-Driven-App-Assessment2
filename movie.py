@@ -30,7 +30,7 @@ class MovieApp:
         search_frame.pack(side="left", padx=10)
 
         self.search_entry = Entry(search_frame, font=("Arial", 12), width=40)
-        self.search_entry.pack(side="left", padx=30)   # Add padding here for the entry box
+        self.search_entry.pack(side="left", padx=30)   # Adds padding for the entry box
 
         # Load Search Button Image
         search_img = Image.open("images/search.png")  
